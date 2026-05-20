@@ -21,6 +21,8 @@ main {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    row-gap: 2rem;
+    padding: 0 1rem;
 }
 
 nav {
@@ -44,7 +46,15 @@ a {
     text-decoration-line: none;
 }
 
-h2 {
+
+.project {
+    border: 1px outset var(--accent-color);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem; /* Only bottom - h3 heading handles top spacing */
+}
+
+#headline {
     color: var(--accent-color);
 }
 
@@ -55,4 +65,10 @@ h2 {
     justify-content: center;
 
     text-align: center;
+    padding: 5rem 0;
+}
+
+#projects, #pull-requests, #about, #contact {
+    display: grid;
+    gap: 1rem;
 }
