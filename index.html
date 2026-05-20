@@ -10,6 +10,7 @@
     <nav>
         <ul>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#pull-requests">Contributions</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -17,18 +18,67 @@
     <main>
         <section id="hero">
             <h1>Justin Major</h1>
-            <h2>Curiosity. Fortitude. Results.</h2>
+            <h2 id="headline">Curiosity. Fortitude. Results.</h2>
         </section>
+
         <section id="projects">
+            <h2>Projects</h2>
+            <article class="project">
+                <h3>Randovania Logic Visualizers</h3>
+                <p>Built two independent visualization tools for a shipped open-source randomizer's logic graph. These helped to find logical bugs in multiple games.</p>
+                <a href="https://github.com/JustinDMS/prime-map-tool" target="_blank">View on GitHub →</a>
+            </article>
+
             <article class="project">
                 <h3><i>Metroid Prime 2: Echoes</i> Room Timer</h3>
-                <p>Built a live memory-reading tool used by the Metroid Prime 2 speedrunning community to find new route optimizations.<br>Supports usage with savestates by inferring intent from ambiguous state.</p>
+                <p>Built a live memory-reading tool used by the Metroid Prime 2 speedrunning community to find new route optimizations.</p>
                 <a href="https://github.com/JustinDMS/echoes-room-timer" target="_blank">View on GitHub →</a>
             </article>
+
+            <article class="project">
+                <h3><i>Animal Crossing (2002)</i> Map Viewer</h3>
+                <p>Reconstructed a live overhead map of the player's town by reading game memory and matching acre IDs to image assets.</p>
+                <a href="https://github.com/JustinDMS/AC-Map-Preview" target="_blank">View on GitHub →</a>
+            </article>
+
+            <article class="project">
+                <h3><i>Animal Crossing (2002)</i> Town Generator</h3>
+                <p>Extracted and isolated the town generation algorithm from a community decompilation to run independently in C, which I was learning at the time.</p>
+                <a href="https://github.com/JustinDMS/animal-crossing-town-finder" target="_blank">View on GitHub →</a>
+            </article>
+
         </section>
-        <section id="about"></section>
-        <section id="contact"></section>
-        <footer></footer>
+
+        <section id="pull-requests">
+            <h2>Open Source Contributions</h2>
+            <article>
+                <h3><a href="https://github.com/randovania/randovania" target="_blank">randovania</a></h3>
+                <small data-repo="randovania/randovania">211 Stars · 149 Forks</small>
+                <p>Contributed 8,000+ lines of data for Metroid Prime: <a href="https://github.com/randovania/randovania/pull/7678">View PR →</a></p>
+            </article>
+            <article>
+                <h3><a href="https://github.com/randovania/randomprime" target="_blank">randomprime</a></h3>
+                <small data-repo="randovania/randomprime">4 Stars · 8 Forks</small>
+                <p>Extended the API to support a new game configuration option: <a href="https://github.com/randovania/randomprime/pull/151">View PR →</a></p>
+                <p>Wrote an assembly patch to modify game behavior: <a href="https://github.com/randovania/randomprime/pull/148">View PR →</a></p>
+            </article>
+        </section>
+
+        <section id="about">
+            <h2>About</h2>
+            <p>Gripped by a fascination with computers and technology, I am constantly seeking to expand my domain of expertise. From small scripts in Python to assembly patches, I go where the problem takes me. It's not work, it's a thirst for knowledge and a chance to be better than I was yesterday.</p>
+            <a href="https://github.com/JustinDMS/" target="_blank">My GitHub Profile →</a>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <a href="mailto:justin.major98@gmail.com">justin.major98@gmail.com</a>
+        </section>
+
+        <footer>
+            <p>Justin Major © 2025</p>
+        </footer>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
