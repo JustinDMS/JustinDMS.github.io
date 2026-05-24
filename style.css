@@ -2,6 +2,7 @@
     --background-color: #000000;
     --text-color: #FFFCF4;
     --accent-color: #FFB000;
+    --max-width: 1280px;
 }
 
 html {
@@ -15,6 +16,7 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 main {
@@ -23,16 +25,21 @@ main {
     flex-grow: 1;
     row-gap: 2rem;
     padding: 0 1rem;
+
+    max-width: var(--max-width);
 }
 
 nav {
     color: var(--accent-color);
+    width: 100%;
+    max-width: var(--max-width);
 }
 
 ul {
     display: flex;
     list-style-type: none;
     padding-left: 0; /* Remove indentation */
+    flex-grow: 1;
 }
 
 li {
@@ -46,6 +53,9 @@ a {
     text-decoration-line: none;
 }
 
+a:hover {
+    text-decoration: underline;
+}
 
 .project {
     border: 1px outset var(--accent-color);
