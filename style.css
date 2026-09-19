@@ -1,15 +1,15 @@
 :root {
     --background-color: #000000;
     --text-color: #FFFCF4;
-    --accent-color: #FFB000;
-    --max-width: 1280px;
+    --accent-primary: #eaa429;
+    --accent-secondary: #050014;
+    --max-width: 960px;
 }
 
 html {
     font-family: monospace;
     background-color: var(--background-color);
     color: var(--text-color);
-    height: 100%;
 }
 
 body {
@@ -17,6 +17,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0;
+    background: linear-gradient(135deg, var(--background-color) 0%, var(--accent-secondary) 50%, var(--background-color) 100%);
 }
 
 main {
@@ -26,13 +28,15 @@ main {
     row-gap: 2rem;
     padding: 0 1rem;
 
+
     max-width: var(--max-width);
 }
 
 nav {
-    color: var(--accent-color);
+    color: var(--accent-primary);
     width: 100%;
     max-width: var(--max-width);
+    padding: 1rem 0;
 }
 
 ul {
@@ -48,8 +52,8 @@ li {
 }
 
 a {
-    color: var(--accent-color);
-    text-decoration-color: var(--accent-color);
+    color: var(--accent-primary);
+    text-decoration-color: var(--accent-primary);
     text-decoration-line: none;
 }
 
@@ -58,14 +62,16 @@ a:hover {
 }
 
 .project {
-    border: 1px outset var(--accent-color);
+    /* border: 1px outset var(--accent-primary); */
+    box-shadow: 0 0 10px 0px var(--accent-primary);
     padding-left: 1rem;
     padding-right: 1rem;
-    padding-bottom: 1rem; /* Only bottom - h3 heading handles top spacing */
+    padding-bottom: 1.25rem; /* Only bottom - h3 heading handles top spacing */
 }
 
+
 #headline {
-    color: var(--accent-color);
+    color: var(--accent-primary);
 }
 
 #hero {
@@ -81,4 +87,8 @@ a:hover {
 #projects, #pull-requests, #about, #contact {
     display: grid;
     gap: 1rem;
+}
+
+#projects {
+    gap: 2rem;
 }
