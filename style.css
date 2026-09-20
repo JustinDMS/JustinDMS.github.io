@@ -2,7 +2,7 @@
     --background-color: #000000;
     --text-color: #FFFCF4;
     --accent-primary: #eaa429;
-    --accent-secondary: #050014;
+    --accent-secondary: #0353A4;
     --max-width: 960px;
 }
 
@@ -52,6 +52,7 @@ li {
 }
 
 a {
+    text-align: center;
     color: var(--accent-primary);
     text-decoration-color: var(--accent-primary);
     text-decoration-line: none;
@@ -61,14 +62,27 @@ a:hover {
     text-decoration: underline;
 }
 
+h2 {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+}
+
 .project {
-    /* border: 1px outset var(--accent-primary); */
-    box-shadow: 0 0 10px 0px var(--accent-primary);
+    box-shadow: 0 0 5px var(--accent-secondary);
+    clip-path: inset(0 0 0 -15px);
     padding-left: 1rem;
     padding-right: 1rem;
     padding-bottom: 1.25rem; /* Only bottom - h3 heading handles top spacing */
 }
 
+.panel {
+    background-color: hsla(0, 0%, 0%, .7);
+    box-shadow: 0 0 10px 0px var(--accent-primary);
+    padding: 2rem;
+}
 
 #headline {
     color: var(--accent-primary);
