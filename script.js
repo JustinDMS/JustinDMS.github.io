@@ -20,4 +20,30 @@ async function updateRepositoryMetadata() {
         });
 }
 
+const HIGHLIGHT_DURATION_MS = 500;
+let highlightTimeout;
+
+/**
+ * Briefly highlights the section a nav link points to by setting its box shadow
+ */
+function onNavButtonClicked(event) {
+    const target = document.querySelector(event.currentTarget.getAttribute("href"));
+
+    if (!target) {
+        return;
+    }
+
+    // Clear any previous highlight so only one section is emphasized at a time
+    clearTimeout(highlightTimeout);
+    document.querySelectorAll('.panel')
+        .forEach((panel) => panel.style.boxShadow = "");
+
+    target.style.boxShadow = "0 0 20px 4px var(--accent-primary)";
+
+    highlightTimeout = setTimeout(() => target.style.boxShadow = "", HIGHLIGHT_DURATION_MS);
+}
+
+document.querySelectorAll('nav a[href^="#"]')
+    .forEach((link) => link.addEventListener("click", onNavButtonClicked));
+
 updateRepositoryMetadata();
