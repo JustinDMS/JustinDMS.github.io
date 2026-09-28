@@ -99,11 +99,11 @@ footer {
     padding: 5rem 0;
 }
 
-#projects, #pull-requests, #about, #contact {
+#personal-projects, #pull-requests, #about, #contact {
     display: grid;
     gap: 1rem;
 }
 
-#projects {
+#personal-projects {
     gap: 2rem;
 }
