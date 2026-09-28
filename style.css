@@ -10,6 +10,7 @@ html {
     font-family: monospace;
     background-color: var(--background-color);
     color: var(--text-color);
+    scroll-padding-top: 1rem;
 }
 
 body {
@@ -106,4 +107,11 @@ footer {
 
 #personal-projects {
     gap: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+    ul {
+        flex-direction: column;
+        gap: 2rem;
+    }
 }
